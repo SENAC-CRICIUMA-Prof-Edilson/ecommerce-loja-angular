@@ -1,0 +1,26 @@
+.geral{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.sec1{
+    max-width: 40%;
+    padding: 10px;
+    border: 1px solid;
+}
+.sec2{
+    width: 100%;
+}
+
+.rangeDisplay{
+    width: 75px;
+}
+
+.itens{
+    display: flex;
+    flex-direction: column;
+}
+.item{
+    padding: 5px;
+}

@@ -1,0 +1,31 @@
+<app-page-subtitle label="Meus Dados"></app-page-subtitle>
+<form id="form-dadospessoais">
+	<div class="form-group">				
+		<label for="email">Nome</label>
+		<input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="cliente.nome" />
+	</div>
+	<div *ngIf="cliente.tipo == 1" class="form-group">
+		<label for="email">CPF</label>
+		<input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="cliente.documento"/>
+	</div>
+	<div *ngIf="cliente.tipo == 2" class="form-group">
+		<label for="email">CNPJ</label>
+		<input type="text" class="form-control" id="cnpj" name="cnpj" [(ngModel)]="cliente.documento"/>
+	</div>
+	<div class="form-group">
+		<label for="email">Email</label>
+		<input type="text" class="form-control" id="email" name="email" disabled readonly [(ngModel)]="cliente.email" />
+	</div>
+	<div class="form-group">
+		<label for="email">Telefone</label>
+		<input type="text" class="form-control" id="telefone" name="telefone" [(ngModel)]="cliente.telefone" />
+	</div>
+	<button 
+        type="button" 
+        class="btn btn-success" 
+        name="salvar" 
+        id="btn-salvar-meusdados"
+        (click)="alterar()"
+    >Alterar Meus Dados</button>
+</form>
+<p-toast position="top-right" key="dashboard-dados"></p-toast>

@@ -1,0 +1,31 @@
+<section class="minhaconta page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <app-page-title title="Minha Conta"></app-page-title>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <app-dashboard-home></app-dashboard-home>
+            </div>
+        </div>        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="list-group menu-dashboard">
+                    <a 
+                        *ngFor="let m of menu"
+                        [routerLink]="m.path" 
+                        class="list-group-item"
+                    >
+                        <i class="{{ m.icon }} icone-op-minhaconta" aria-hidden="true"></i>
+                        <label>{{ m.label }}</label>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+<app-page-subtitle label="Alterar Senha"></app-page-subtitle>
+<form id="form-alterarsenha">
+	<div class="form-group">
+		<label for="senha">Senha</label>
+		<input 
+			type="password" 
+			class="form-control" 
+			placeholder="Digite a Senha"
+			[(ngModel)]="password"
+			name="senha"
+			id="senha"
+		>
+	</div>
+	<div class="form-group">
+		<label for="csenha">Confirma Senha</label>
+		<input 
+			type="password" 
+			class="form-control" 
+			placeholder="Confirme a Senha"
+			[(ngModel)]="cpassword"
+			name="csenha"
+			id="csenha"			
+		>
+	</div>
+	<button 
+		type="button" 
+		class="btn btn-success" 
+		name="salvar" 
+		id="btn-alterarsenha"
+		(click)="alterarSenha()"
+	>Alterar</button>
+</form>
+<p-toast position="top-right" key="dashboard-senha"></p-toast>

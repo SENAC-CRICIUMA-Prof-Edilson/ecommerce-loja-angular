@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row" *ngIf="!is_auth">
+        <div class="col-md-6">
+            <app-page-title title="Quero Me Cadastrar"></app-page-title>
+            <small>
+                O cadastro é importante pois precisamos de suas informações para melhor atende-lo. Estar em contanto com você e saber suas preferencias fará toda a diferença em nosso atendimento.				
+            </small>
+            <br><br><br>
+            <a routerLink="/queromecadastrar" class="btn btn-cadastra-se">Click aqui para se <b>CADASTRAR</b></a>
+        </div>
+        <div class="col-md-6 divisoria">
+            <app-page-title title="Minha Conta"></app-page-title>
+            <small id="texto-login">Olá, para visualizar suas compras, seus dados, alterar ou adicionar endereços é preciso que você entre com seu e-mail e senha. </small>
+            <br>
+            <app-logon></app-logon>
+        </div>
+    </div>
+    <div class="row" *ngIf="is_auth">
+        <div class="col-md-6">
+            <app-identify></app-identify>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<p>Deixe seu email para receber <strong>Novas Ofertas</strong></p>
+<form>
+  <input 
+    class="input newsletter-input" 
+    type="text" 
+    placeholder="Digite seu email aqui"
+    [(ngModel)]="email_newsletter"
+    name="email_newsletter"
+>
+  <button 
+    class="newsletter-btn"
+    (click)="add()"
+    >
+        <i class="fa fa-envelope"></i>
+        <span> Inscrever-se</span>
+    </button>
+</form>
+<p-toast position="top-right" key="newsletter"></p-toast>

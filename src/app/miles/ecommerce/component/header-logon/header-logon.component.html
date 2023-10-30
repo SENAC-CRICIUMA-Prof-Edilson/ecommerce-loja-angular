@@ -1,0 +1,16 @@
+<ul 
+    class="header-links pull-right user-logged out"
+    [style.display]="logged_off"
+>
+    <li><a routerLink="/cadastro"><i class="fa fa-user-plus"></i> Cadastrar-se</a></li>
+    <li><a routerLink="/minhaconta"><i class="fa fa-user"></i> Minha Conta </a></li>        
+</ul>
+
+<ul 
+    class="header-links pull-right user-logged in"
+    [style.display]="logged_on"
+>
+    <li><i class="fa fa-user"></i> <span id="links-username">{{usuario.nome}}</span></li>
+    <li><a routerLink="/dashboard"><i class="fa fa-cog"></i></a></li>
+    <li><a routerLink="/logout"><i class="fa fa-power-off"></i></a></li>
+</ul>

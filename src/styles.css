@@ -1,0 +1,436 @@
+/* You can add global styles to this file, and also import other style files */
+/*COR PADRAO USADSA NOS BOTOES     */
+
+
+.search-btn, 
+.add-to-cart-btn, 
+.shop::after, 
+.shop::before, 
+.newsletter-btnm,
+.btn-cadastra-se,
+#btn-logon-entrar
+{
+    background-color: #0078a8 !important;
+    color:#FFF !important;
+}
+
+.new{
+    border-color: #2596be !important;
+    background-color: #2596be !important;
+}
+.sale{    
+    border-color: #2596be !important;
+    color: #2596be !important;
+
+}
+.product-price{
+    color:#2596be !important;
+}
+
+.product .product-body .product-rating > i.fa-star{
+    color:gold !important;
+}
+i{
+    color:#2596be !important;
+}
+.fa-arrow-circle-right{
+    color:white !important;
+
+}
+.add-to-cart, .newsletter-btn i{
+    color: white !important;
+}
+
+#navigation{
+    border-top: 3px solid #2596be !important;
+}
+#newsletter{
+    border-bottom: 3px solid #2596be !important;
+}
+
+.fa-credit-card, .fa-cc-visa, .fa-cc-paypal, .fa-cc-mastercard, .fa-cc-discover, .fa-cc-amex{
+    color: white !important;
+}
+
+.link-dev{
+    color: #2596be;
+}
+
+.product-img img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-widget .product-body .product-name > a:hover{
+    color: #2596be !important;
+}
+
+section.page{
+    padding:30px 0;
+}
+
+.resumo-footer {
+    display:flex;
+    justify-content: space-between;
+    border-top:3px solid #DDD;
+    padding-top:10px;
+}
+
+.resumo-footer .resumo-list-totais
+{
+    width: 30%;
+}
+
+.resumo-footer .resumo-list-totais .badge
+{
+    background-color: transparent;
+    color:#64748B;
+}
+
+.p-datatable-table .p-datatable-thead tr .text-center,
+.p-datatable-table .p-datatable-tbody tr .text-center
+{
+    text-align: center !important;
+}
+.p-datatable-table .p-datatable-thead tr .text-right,
+.p-datatable-table .p-datatable-tbody tr .text-right
+{
+    text-align: right !important;
+}
+
+.checkout-steps .p-component
+{
+    margin:30px auto !important;
+}
+
+.checkout .p-toolbar
+{
+    border:0px ;
+    background-color: transparent;
+}
+
+.checkout .p-card
+{
+    box-shadow:none;
+}
+
+
+.resumo-footer{
+    margin-top:30px !important;
+}
+
+.resumo-footer .resumo-list-totais li
+{
+    border:0 !important;
+}
+.resumo-image-produto{
+    max-width: 100%;
+}
+
+.product .add-to-cart .add-to-cart-btn:hover
+{
+    border:2px solid #FFF !important;
+}
+
+.product .add-to-cart i {
+    color:#FFF !important;
+}
+
+.product .add-to-cart .add-to-cart-btn > i
+{
+    line-height:40px !important;   
+    top:-2px !important;
+    left:10px !important;
+}
+
+#aceite-checkbox
+{
+    border: 1px solid #FFF !important;
+    padding: 5px;
+}
+#aceite-checkbox.nao-aceite
+{
+    border: 1px solid #FF0000 !important;
+    background-color: #ffe3e1;
+    border-radius: 5px;
+}
+
+.form-check  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    height: 50px;
+}
+
+section.page {
+    padding:30px 0;
+}
+
+
+#btn-calcular-frete-correios{
+    float: right;
+    margin-top: -30px;
+}
+
+#accordionOpcoesFrete .form-check-label
+{
+    color:#000;
+    font-weight: bold;
+}
+
+#accordionOpcoesFrete .card
+{
+    border:1px solid #FFF !important;
+    background-color: #F9F9F9;
+}
+
+#accordionOpcoesFrete .card-header
+{
+    text-align: left !important;
+}
+
+.img-opcoes-lojas
+{
+    min-height: 128px !important;
+    min-width: 128px;
+    max-width: 128px;
+    max-height: 128px;
+    object-fit: cover;
+}
+
+.delivery-media{
+    display:flex;
+    flex-direction: row;
+}
+
+.delivery-media .media {
+    margin:auto 15px !important;
+}
+
+
+.msg-error-formgroup{
+	display:none;
+}
+
+
+.loading2{
+	width:32px;
+	height:32px;
+	display:none;
+}
+
+#valorsubtotal-pagamento , #valorfrete-pagamento{
+	float:left;
+	width:100%;
+	margin:0px;
+    text-align: right;
+	background-color: #E9E9E9;
+	margin-top:10px;	
+}
+
+#valortotalcompra-pagamento{
+	text-align:right;
+}
+
+#valortotalcompra-pagamento .valor-total-compra-checkout{
+	font-size:24px;
+}
+
+#valortotalcompra-pagamento .label-valortotal{
+    text-align: right !important;
+}
+
+#btn-div-boleto,#btn-div-boleto{
+	width: 175px;
+}
+
+.header-ctn{
+    cursor:pointer;
+}
+
+.cart-dropdown .cart-btns > a {
+    width:100% !important;
+}
+
+.cart-dropdown .cart-summary{
+    text-align: right;
+}
+
+.cart-dropdown .cart-list {
+    overflow-y: hidden !important;
+}
+
+.header-links li {
+    color:#FFF;
+    font-weight: 500;
+}
+
+#form-autenticacao-cliente
+{
+    padding-top:30px;
+}
+
+.slick-track {
+    float:left !important;
+}
+
+.products-tabs{
+    margin-bottom: 50px !important;
+}
+
+
+.product-detail .product{
+    margin:0 !important;    
+}
+.product-detail .img-grade {
+    display: flex;
+    flex-direction: column;
+}
+.product-detail .img-grade img {
+    cursor: pointer !important;
+}
+
+.product-detail .img-grade {
+    max-width: 100% !important;
+}
+
+.product-detail .img-principal{
+    max-width: 100% !important;
+}
+
+.product-detail .info-produtos{
+    display: flex;
+    flex-direction: column;
+    border:0px !important;
+    box-shadow:none !important;
+}
+
+.product-detail .product-description{
+    box-shadow:none !important;
+    border:0px !important;
+}
+.product-detail .add-to-cart{
+    position: relative !important;
+    margin-top: 50px;
+}
+.product-detail .add-to-cart-btn {
+	margin: 0 auto;
+	padding: 10px;
+	border: none;
+	border-radius: 50px;
+}
+.product-detail .add-to-cart-btn:hover{
+    color: white;
+    transition: .3s;
+    padding: 0 30px !important;
+
+}
+
+.product-detail .product:hover .add-to-cart {
+    -webkit-transform: translateY(0%) !important;
+    -ms-transform: translateY(0%) !important;
+    transform: translateY(0%) !important;
+}
+  
+.product .add-to-cart .add-to-cart-btn:hover>i {
+opacity: 1;
+visibility: visible;
+}
+
+
+.product-detail .p-inputnumber-input{
+text-align: center !important;
+}
+
+.product-detail .product-body{
+text-align: left !important;
+padding: 15px 0 !important;
+}
+
+.product-detail .product-name
+{
+    margin-bottom:7rem;
+}
+
+.checkbox-cadastro-politicaprivacidade{
+    margin:5px auto 10px auto;
+}
+.checkbox-cadastro-politicaprivacidade .form-check-label
+{
+    margin-left:10px;
+    font-weight: normal;
+}
+
+.politicaprivacidade-box {
+    height: 150px;
+    overflow-y: auto;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #FFF;
+    border: 1px solid #EEE;
+    border-radius: 5px;
+}
+
+.cart-list .alert {
+    margin-bottom: 0 !important;
+    display: none;
+}
+
+.p-card .p-card-body {
+    padding: 0rem !important;
+}
+
+.resumo-sem-produto,
+.aviso-logado
+{
+    text-align: center !important;
+    float:left;
+    width:100%;
+    font-size:14px;
+}
+
+#chktermo{
+    margin:0px 5px;
+}
+
+.menu-dashboard a label{
+    margin-left:10px;
+}
+
+.boasvindas-home-dashboard{
+    font-size: 1.7rem;
+    font-weight: normal;
+}
+.boasvindas-home-username{
+    font-weight: bold;
+}e
+
+.page-subtitle{
+    font-size: 1.7rem;
+    border-bottom: 1px solid #DDD;
+    padding-bottom:5px;
+    margin-bottom:20px;
+}
+
+.newsletter-input:active{
+    border:1px solid transparent !important;
+}
+
+.form-check-politica{
+    height: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.form-check-politica label {
+    margin:0;
+}
+
+.td-validation-success {
+    background-color:#f1ffee !important;
+}
+
+.td-validation-error{
+    background-color:#ffe6e6 !important;
+}

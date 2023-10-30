@@ -1,0 +1,51 @@
+<div class="col-md-3 clearfix">
+    <div class="header-ctn">
+      <div class="dropdown" id="cart-header-dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+          <i class="fa fa-shopping-cart"></i>
+          <span>Carrinho</span>
+          <div class="qty">{{ _quantidade_total_itens }}</div>
+        </a>
+        <div class="cart-dropdown">
+          <div class="cart-list">
+            <div class="alert alert-warning text-center">Seu carrinho está vazio.</div>
+            <div class="product-widget" *ngFor="let item of data">
+              <div class="product-img">
+                <img src="{{ item.src }}" alt="">
+              </div>
+              <div class="product-body">
+                <h3 class="product-name">{{item.descricao}}</h3>
+                <h4 class="product-price">
+                  <span class="qty">{{item.quantidade}}x</span>
+                  <span>{{ getValorFormatado(item.total) }}</span>
+                </h4>
+              </div>
+              <button 
+                class="delete"
+                (click)="removeItem(item.id)"
+              >
+                <i class="fa fa-close"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="cart-summary">
+            <small>{{ getQuantidadeItens() }} Item(s) selecionados</small>
+            <h5>SUBTOTAL: {{ valor_total }}</h5>
+          </div>
+          <div class="cart-btns" *ngIf="getQuantidadeItens() > 0">
+            <a routerLink="/checkout" (click)="fecharCarrinho()">
+              <span>Finalizar Pedido </span>
+              <i class="fa fa-arrow-circle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="menu-toggle">
+        <a href="#">
+          <i class="fa fa-bars"></i>
+          <span>Menu</span>
+        </a>
+      </div>
+    </div>
+  </div>

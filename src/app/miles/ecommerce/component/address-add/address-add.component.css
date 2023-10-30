@@ -1,0 +1,13 @@
+.row-logradouro
+{
+    display:flex;
+}
+
+.row-logradouro #logradouro
+{
+    width: 85%;
+}
+
+.row-logradouro #numero{
+    width: 15%;
+}

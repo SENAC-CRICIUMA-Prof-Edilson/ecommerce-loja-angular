@@ -1,0 +1,26 @@
+<ul class="list-unstyled">
+    <li class="media">
+        <img src="https://opticaadolfo.com.br:443/miles/projects/1/arquivos/logo-64-1.jpg" class="mr-3 logo-transportadora" alt="Correios">
+        <div class="media-body">
+            <h5 class="mt-0 mb-1">Correios</h5>
+            <!-- <button class="btn-selecionar-transportadora btn btn-default">Selecionar</button> -->
+            <button id="btn-calcular-frete-correios" class="btn btn-dark btn-calcular-frete">
+                <i class="fa fa-calculator"></i>
+                Calcular
+            </button>
+            <hr>
+            <form>
+                <div class="form-group">
+                    <label for="cep-correios">Digite seu CEP</label>
+                    <input type="text" class="form-control" id="cep-correios" value="88804-770">
+                    <small class="form-text text-muted">Tabelas de Valores:</small>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item list-group-item-light"><small>Serviço: <span id="correios-servico"></span></small></li>
+                        <li class="list-group-item list-group-item-light"><small>Prazo: <span id="correios-prazo"></span></small></li>
+                        <li class="list-group-item list-group-item-warning">Valor Total: <span class="badge badge-pill warning" id="correios-valortotal"></span></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </li>
+</ul>

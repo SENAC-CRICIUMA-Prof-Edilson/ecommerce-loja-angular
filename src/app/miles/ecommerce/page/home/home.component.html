@@ -1,0 +1,52 @@
+<!--IMPORTANDO SLIDER-->
+<app-slider></app-slider>
+<!--IMPORTANDO SLIDER-->
+
+  <!-- SECTION -->
+  <div class="section">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+  
+        <!-- section title -->
+        <div class="col-md-12">
+          <app-page-title title="Novos Produtos"></app-page-title>
+        </div>
+        <!-- /section title -->
+        
+        <!-- Products tab & slick -->
+        <div class="col-md-12" >
+          <div class="row" >
+              <app-product-item-list 
+                #product_list
+                [products]="data"
+              ></app-product-item-list>
+          </div>
+        </div>
+        <!-- Products tab & slick -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /SECTION -->
+  
+  <!-- NEWSLETTER -->
+  <div id="newsletter" class="section">
+    <!-- container -->
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-md-12">
+          <div class="newsletter">
+            <app-newsletter></app-newsletter>
+            <app-redessociais></app-redessociais>
+          </div>
+        </div>
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /NEWSLETTER -->

@@ -1,0 +1,31 @@
+<app-page-subtitle label="Meu Endereço Principal"></app-page-subtitle>
+<p-messages 
+    [closable]="false" 
+    severity="warn"
+    *ngIf="!is_auth"
+>
+    <ng-template pTemplate>
+        <div class="aviso-logado">Você precisa estar logado para continuar.</div>
+    </ng-template>
+</p-messages>    
+<form 
+    id="dadospessoais-resumo"
+    *ngIf="is_auth"
+>
+    <div class="form-group">
+        <label for="email">Endereço</label>
+        <p>{{ address.endereco }}</p>
+    </div>
+    <div class="form-group">
+        <label for="genero">Bairro</label>
+        <p>{{ address.bairro }}</p>
+    </div>
+    <div class="form-group">
+        <label for="genero">Cidade</label>
+        <p>{{ address.cidade }}</p>
+    </div>
+    <div class="form-group">
+        <label for="email">CEP</label>
+        <p>{{ address.cep }}</p>
+    </div>
+</form>

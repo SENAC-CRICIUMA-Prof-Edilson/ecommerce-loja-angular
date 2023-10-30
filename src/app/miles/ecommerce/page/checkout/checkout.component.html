@@ -1,0 +1,52 @@
+<section class="checkout container page">
+    <h1>Checkout</h1>
+    <p-steps [model]="steps" class="checkout-steps" [activeIndex]="current_step"></p-steps>
+    <p-toolbar>
+        <div class="p-toolbar-group-left">
+            <p-button 
+                label="Anterior" 
+                icon="pi pi-angle-double-left"                
+                styleClass="p-button-secondary p-button-outlined p-button-text p-button-raised"
+                iconPos="left"
+                (click)="previousStep()"
+                *ngIf="current_step>0"
+            ></p-button>            
+        </div>
+        <div class="p-toolbar-group-right">
+            <p-button 
+                label="Próxima" 
+                icon="pi pi-angle-double-right"                
+                styleClass="p-button-secondary p-button-raised"
+                iconPos="right"
+                (click)="nextStep()"
+                *ngIf="current_step<(this.steps.length -1)"
+            ></p-button>
+        </div>
+    </p-toolbar>
+    <p-card>
+        <router-outlet></router-outlet>
+    </p-card>
+    <div class="resumo-footer">
+        <p-button 
+            label="Continuar Comprando" 
+            icon="pi pi-dollar"
+            styleClass="p-button-secondary p-button-raised"
+            routerLink="/home"
+        ></p-button>  
+    
+        <ul class="list-group" class="resumo-list-totais">
+            <li class="list-group-item">
+                <span class="badge resumo-totais-subtotal">{{ subtotal }}</span>
+                <span>Subtotal</span>
+            </li>
+            <li class="list-group-item">
+                <span class="badge resumo-totais-frete">{{ frete }}</span>
+                <span>Frete</span>
+            </li>
+            <li class="list-group-item disabled resumo-totais-total">
+                <span class="badge">{{ total }}</span>
+                <span>Total</span>
+            </li>
+        </ul>
+    </div>    
+</section>

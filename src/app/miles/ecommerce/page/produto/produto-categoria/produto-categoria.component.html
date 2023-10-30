@@ -1,0 +1,16 @@
+<section class="page">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <app-page-title [title]="categoria_desc"></app-page-title>
+      </div>  
+    </div>
+    <div class="row" >
+        <app-product-item-list 
+          #product_list_categoria
+          [products]="products"
+        ></app-product-item-list>
+        <p-messages [value]="msg" key="categoria" [closable]="false"></p-messages>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner" role="listbox">
+    <div *ngFor="let slider of data;let i = index;" class="item {{ i==0?'active':'' }}">
+      <img [src]="slider.imagem_src" alt="...">
+    </div>
+  </div>
+</div>

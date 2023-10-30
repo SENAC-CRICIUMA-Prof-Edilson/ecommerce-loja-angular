@@ -1,0 +1,59 @@
+<section class="page product-detail">
+    <div class="container">
+        <div class="row">
+             <h1 class="product-name">{{produto.nome}}</h1> 
+        </div>
+        <div class="row">
+            <div class="col-md-1">
+                <div class="img-grade">
+                     <img *ngFor="let imagem of produto.imagens" [src]="imagem.imagem_src" (click)="setImagePrincipal(imagem.imagem_src)"/> 
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img
+                    [src] = "product_img_src" 
+                    
+                    class="img-principal"
+                >
+            </div>
+            <div class="col-md-5">
+                <div class="product info-produtos"> 
+                    <p _ngcontent-yht-c98="" class="product-category">Relogios Ponto Eletronico</p>                   
+                     <h4 class="product-price">R$ {{ produto.formated_preco }}</h4> 
+                    <div class="item">
+                        <label>Quantidade</label>
+                        <br/>
+                        <p-inputNumber 
+                            [(ngModel)]="quantity" 
+                            [showButtons]="true" 
+                            buttonLayout="horizontal" 
+                            spinnerMode="horizontal"
+                            decrementButtonClass="p-button-info" 
+                            incrementButtonClass="p-button-info" 
+                            incrementButtonIcon="pi pi-plus" 
+                            decrementButtonIcon="pi pi-minus"
+                            [min]="1"
+                        ></p-inputNumber>                    
+                    </div>
+                    <div class="add-to-cart">
+                        <button 
+                            class="add-to-cart-btn"
+                            (click)="addCart()"
+                        >Comprar</button>
+                    </div>                           
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <hr/>
+                <div class="product product-description">
+                    <div class="product-body">
+                        <p [innerHTML]="produto.descricao"></p>
+                    </div>
+             
+                </div>                
+            </div>
+        </div>
+    </div>    
+</section>

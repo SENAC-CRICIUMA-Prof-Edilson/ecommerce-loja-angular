@@ -1,0 +1,91 @@
+<app-page-subtitle label="Meu Endereço"></app-page-subtitle>
+<form class="form-endereco">
+	<div class="form-group">
+		<label for="estado">Estado</label>
+		<select 
+            id="estado" 
+            name="estado" 
+            class="form-control"
+            [(ngModel)]="uf"
+        >
+            <option 
+                *ngFor="let estado of estados" 
+                [value]="estado.id"
+                [innerHtml]="estado.nome"
+            ></option>
+		</select>    
+	</div>
+	<div class="form-group">
+		<label for="cidade">Cidade</label>
+		<input 
+            id="cidade" 
+            name="cidade" 
+            class="form-control" 
+            [(ngModel)]="cidade"
+        />
+	</div>
+	<div class="form-group" id="campo-bairro">
+		<label for="bairro">Bairro</label>
+		<input 
+            type="text" 
+            class="form-control" 
+            id="bairro" 
+            name="bairro" 
+            placeholder="Bairro"
+            [(ngModel)]="bairro"
+        >
+	</div>
+	<div class="form-group">
+		<label for="logradouro">Logradouro</label>
+        <div class="row-logradouro">
+		    <input 
+                type="text" 
+                class="form-control" 
+                id="logradouro" 
+                name="logradouro" 
+                placeholder="Nome da Rua, Avenida ..."
+                [(ngModel)]="logradouro"
+            >
+		    <input 
+                type="text" 
+                class="form-control" 
+                id="numero" 
+                name="numero" 
+                placeholder="Nº"
+                [(ngModel)]="numero"
+            >
+        </div>
+	</div>
+	<div class="form-group">
+		<label for="complemento">Complemento</label>
+		<input 
+            type="text" 
+            class="form-control" 
+            id="complemento" 
+            name="complemento" 
+            placeholder="Complemento"
+            [(ngModel)]="complemento"
+        >
+	</div>	
+	<div class="form-group">
+		<label for="cep">CEP</label>
+		<input 
+            type="text" 
+            class="form-control" 
+            id="cep" 
+            name="cep" 
+            placeholder="CEP"
+            [(ngModel)]="cep"
+        >
+	</div>
+	<div class="form-group">
+		<button 
+            type="button" 
+            class="btn btn-success" 
+            name="salvar" 
+            id="btn-meusenderecos-salvarendereco"
+            (click)="salvar()"
+        >Salvar</button>	
+	</div>
+</form>
+<p-toast position="top-right" key="dashboard-address-add"></p-toast>

@@ -1,0 +1,75 @@
+<div class="products-tabs">
+    <div  class="tab-pane active">
+        <div 
+            [id]="_id" 
+            class="products-slick"           
+            data-nav="#slick-nav-td"
+        >
+            <div 
+                class="product"
+                *ngFor="let product of products"                
+            >
+                <div class="product-img" routerLink="/produto/{{ product.id }}">
+                    <img [src]="getSrc(product.imagens)" alt="">
+                    <div class="product-label">
+                        <span class="sale">!</span>
+                        <span class="new">Novidade</span>
+                    </div>
+                </div>
+                <div class="product-body">
+                    <span routerLink="/produto/{{ product.id }}">
+                        <p class="product-category">{{product.categoria_desc}}</p>
+                        <h3 class="product-name">{{product.nome}}</h3>
+                        <h4 class="product-price">
+                            R$ {{ product.formated_preco }}
+                            <del style="display: none" class="product-old-price">R$990.00</del>
+                        </h4>
+                        <div class="product-rating" style="display:none">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                    </span> 
+                    <div class="product-btns">
+                        <button class="add-to-wishlist" (click)="addCart(product)">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="tooltipp">Adicionar</span>
+                        </button>
+                        <button class="quick-view" (click)="irDetalheProduto(product.id)">
+                            <i class="fa fa-eye"></i>
+                            <span class="tooltipp">Visualizar</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="add-to-cart">
+                    <button 
+                        class="add-to-cart-btn" 
+                        (click)="addItemCart(product)"
+                    >
+                        <i class="fa fa-dollar"></i>
+                        <span>Comprar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="slick-nav-td" class="products-slick-nav"></div>
+    </div>
+</div>
+<!-- <p-confirmDialog     
+    [style]="{width: '50vw'}"
+    header="Carrinho de Compras"
+    icon="pi pi-exclamation-triangle"
+    [blockScroll]="false"
+></p-confirmDialog> -->
+
+<p-confirmDialog #cd [style]="{width: '50vw'}">
+    <ng-template pTemplate="header">
+        <h4>{{ confirm_header }} </h4>
+    </ng-template>
+    <ng-template pTemplate="footer">
+        <button type="button" pButton icon="pi pi-times" label="Não" (click)="cd.reject()" class="p-button-raised p-button-danger p-button-text"></button>
+        <button type="button" pButton icon="pi pi-check" label="Sim" (click)="cd.accept()" class="p-button-raised p-button-success"></button>
+    </ng-template>
+</p-confirmDialog>

@@ -1,0 +1,35 @@
+<div class="section">
+    <div class="container">
+      <div class="row">
+
+        <div 
+            class="col-md-3 col-xs-6"
+            *ngFor="let m of menu"
+        >
+          <div class="footer" *ngIf="m.pai == 0">
+            <h3 class="footer-title">{{ m.descricao }}</h3>
+            <ul class="footer-links">
+              <li *ngFor="let sm of menu">
+                <span *ngIf="sm.pai == m.id">
+                    <a 
+                        *ngIf="sm.link != '#' && sm.link != ''"
+                        href="{{ sm.link }}"
+                    >
+                        {{ sm.descricao }}
+                    </a>                    
+                    <span *ngIf="sm.link == '#' || sm.link == ''">                        
+                        <i class="{{ getIcone(sm.fixo) }}"></i>
+                        {{ sm.descricao }}
+                    </span>                    
+                </span>
+            </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+  <!-- /top footer -->

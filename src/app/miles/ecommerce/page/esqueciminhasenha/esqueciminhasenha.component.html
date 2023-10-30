@@ -1,0 +1,40 @@
+<section class="page esqueciminhasenha">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <app-page-title title="Esqueci Minha Senha"></app-page-title>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="alert alert-warning">
+                    <h4>Importante!</h4>
+                    <p>Digite o e-mail que você usou no seu cadastrado. Você receberá um link para alteração.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <form id="form-esqueciminhasenha">
+                    <div class="form-group">
+                        <label for="email">E-Mail</label>
+                        <input 
+                            type="email" 
+                            class="form-control esqueciminhasenha-input"
+                            id="email" 
+                            name="email" 
+                            placeholder="Digite seu E-Mail"
+                            [(ngModel)]="email_esqueciminhasenha"
+                            (blur)="verifica()"
+                        />
+                    </div>
+                    <button 
+                        type="submit" 
+                        class="btn btn-primary esqueciminhasenha-btn" 
+                        id="enviar-esqueciminhasenha"
+                        (click)="send()"
+                    >Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<p-toast position="top-right" key="esqueciminhasenha"></p-toast>

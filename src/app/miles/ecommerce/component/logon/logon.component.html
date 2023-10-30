@@ -1,0 +1,17 @@
+<form id="form-autenticacao-cliente">
+    <input type="hidden" name="ischeckout" id="ischeckout" value="true">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" name="senha" placeholder="Senha">
+    </div>
+    <div class="form-group">
+        <a routerLink="/esqueciminhasenha" style="float:right;" id="esquiminhasenha-link">Esqueci Minha Senha</a>
+    </div>	
+    <button type="button" class="btn" id="btn-logon-entrar" (click)="logar()">Acessar</button>
+</form>
+<br>
+<div id="div-response-logon"></div>
